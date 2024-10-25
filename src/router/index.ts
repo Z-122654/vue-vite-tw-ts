@@ -13,9 +13,29 @@ const router = createRouter({
     },
     {
       path: '/vant/list',
-      name: 'list',
+      name: 'vant-list',
       component: () => import('@/views/vant/List.vue')
     },
+    {
+      path: '/vant/form',
+      name: 'vant-form',
+      component: () => import('@/views/vant/Form.vue')
+    },
+    {
+      path: '/ant/button',
+      name: 'ant-button',
+      component: () => import('@/views/ant/Button.vue')
+    },
+    {
+      path: '/pinia/rectangle',
+      name: 'pinia-rectangle',
+      component: () => import('@/views/pinia/Rectangle.vue')
+    },
+    {
+      path: '/pinia/table',
+      name: 'pinia-table',
+      component: () => import('@/views/pinia/Table.vue')
+    }
   ]
 })
 
