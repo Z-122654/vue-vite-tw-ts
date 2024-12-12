@@ -6,6 +6,7 @@ import lodashEs from "lodash-es"
 <template>
 <div>
   OptimizeDeps Demo
+
 </div>
 </template>
 
