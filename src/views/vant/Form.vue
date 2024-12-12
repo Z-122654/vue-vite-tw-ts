@@ -24,7 +24,6 @@ const vFocus = {
       placeholder="请输入手机号"
     />
   </van-cell-group>
-  <input type="text" v-focus>
 
 </template>
 

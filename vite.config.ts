@@ -15,7 +15,7 @@ const plugins: Array<Plugin> = [
     // 启用 Vue DevTools
     componentInspector: true,
     // 将默认编辑器从 VS Code 更改为 WebStorm
-    launchEditor: 'webstorm',
+    launchEditor: 'webstorm'
   }),
   Components({
     resolvers: [
@@ -40,28 +40,42 @@ if (process.env.CYPRESS_TEST === 'true') {
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  plugins,
-  test: {
-    server: {
-      deps: {
-        inline: ['date-fns']
-      }
-    },
-    environment: 'happy-dom',
-    globals: true,
-    coverage: {
-      all: true,
-      exclude: ['*.config.{ts,js}', '**/*.d.ts', 'src/main.ts', 'dist', 'test'],
-      functions: 80,
-      branches: 80,
-      statements: 80
-    }
+  optimizeDeps: {
+    // exclude: ['lodash-es']
   },
+  plugins,
+  test:
+    {
+      server: {
+        deps: {
+          inline: ['date-fns']
+        }
+      }
+      ,
+      environment: 'happy-dom',
+      globals:
+        true,
+      coverage:
+        {
+          all: true,
+          exclude:
+            ['*.config.{ts,js}', '**/*.d.ts', 'src/main.ts', 'dist', 'test'],
+          functions:
+            80,
+          branches:
+            80,
+          statements:
+            80
+        }
+    }
+  ,
   build: {
     sourcemap: mode === 'production' ? false : 'inline'
-  },
+  }
+  ,
   server: {
     port: 3000,
-    host: '0.0.0.0'
+    host:
+      '0.0.0.0'
   }
 }))

@@ -13,28 +13,38 @@ const router = createRouter({
     },
     {
       path: '/vant/list',
-      name: 'vant-list',
+      name: 'vantList',
       component: () => import('@/views/vant/List.vue')
     },
     {
       path: '/vant/form',
-      name: 'vant-form',
+      name: 'vantForm',
       component: () => import('@/views/vant/Form.vue')
     },
     {
       path: '/ant/button',
-      name: 'ant-button',
+      name: 'antButton',
       component: () => import('@/views/ant/Button.vue')
     },
     {
       path: '/pinia/rectangle',
-      name: 'pinia-rectangle',
+      name: 'piniaRectangle',
       component: () => import('@/views/pinia/Rectangle.vue')
     },
     {
-      path: '/pinia/table',
-      name: 'pinia-table',
-      component: () => import('@/views/pinia/Table.vue')
+      path: '/pinia/user',
+      name: 'piniaTable',
+      component: () => import('@/views/pinia/user/UserList.vue')
+    },
+    {
+      path: '/echart/devicePoint',
+      name: 'echartDevicePoint',
+      component: () => import('@/views/echarts/DevicePoint.vue')
+    },
+    {
+      path: '/base/OptimizeDeps',
+      name: 'baseOptimizeDeps',
+      component: () => import('@/views/base/OptimizeDeps.vue')
     }
   ]
 })
