@@ -53,6 +53,7 @@ const handleOk = function (e: MouseEvent) {
 const editForm = function () {
   open.value = true
 }
+
 </script>
 
 <template>
