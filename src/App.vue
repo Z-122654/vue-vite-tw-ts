@@ -5,6 +5,7 @@
 <script setup lang="ts">
 import { darkTheme, lightTheme } from 'naive-ui'
 import { computed, provide, ref, watchEffect } from 'vue'
+import SlidingWindow from '@/views/base/SlidingWindow.vue'
 
 const darkStore = localStorage.getItem('dark')
 const prefersDark: boolean = darkStore
@@ -20,7 +21,7 @@ watchEffect(() => {
 
 const collapsed = ref(true)
 
-provide("pinia","Pinia与provide的测试");
+provide('pinia', 'Pinia与provide的测试')
 </script>
 
 <style lang="sass">

@@ -42,9 +42,9 @@ const router = createRouter({
       component: () => import('@/views/echarts/DevicePoint.vue')
     },
     {
-      path: '/base/OptimizeDeps',
-      name: 'baseOptimizeDeps',
-      component: () => import('@/views/base/OptimizeDeps.vue')
+      path: '/element/dialog/deepseekTestDialog',
+      name: 'deepseekTestDialog',
+      component: () => import('@/views/element/base/DeepseekTestDialog.vue')
     }
   ]
 })
