@@ -12,9 +12,7 @@ const plugins: Array<Plugin> = [
   vue(),
   tsconfigPaths(),
   vueDevTools({
-    // 启用 Vue DevTools
     componentInspector: true,
-    // 将默认编辑器从 VS Code 更改为 WebStorm
     launchEditor: 'webstorm'
   }),
   Components({
