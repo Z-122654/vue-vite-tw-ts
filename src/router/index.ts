@@ -45,6 +45,21 @@ const router = createRouter({
       path: '/element/dialog/deepseekTestDialog',
       name: 'deepseekTestDialog',
       component: () => import('@/views/element/base/DeepseekTestDialog.vue')
+    },
+    {
+      path: '/base/dropUploadFile',
+      name: 'dropUploadFile',
+      component: () => import('@/views/base/DropUploadFile.vue')
+    },
+    {
+      path: '/ant/calendar',
+      name: 'dropUploadFile',
+      component: () => import('@/views/ant/Calendar.vue')
+    },
+    {
+      path: '/base/tanshuti',
+      name: 'tanshuti',
+      component: () => import('@/views/base/TanShuTi.vue')
     }
   ]
 })
