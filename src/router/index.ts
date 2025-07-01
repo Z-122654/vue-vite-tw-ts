@@ -57,6 +57,11 @@ const router = createRouter({
       component: () => import('@/views/ant/Calendar.vue')
     },
     {
+      path: '/ant/timeRangePicker',
+      name: 'timeRangePicker',
+      component: () => import('@/views/ant/TimeRangePicker.vue')
+    },
+    {
       path: '/base/tanshuti',
       name: 'tanshuti',
       component: () => import('@/views/base/TanShuTi.vue')

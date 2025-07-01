@@ -7,9 +7,8 @@ export {}
 /* prettier-ignore */
 declare module 'vue' {
   export interface GlobalComponents {
+    ATimeRangePicker: typeof import('ant-design-vue/es')['TimeRangePicker']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    ACalendar: typeof import('ant-design-vue/es')['Calendar']
-    AInput: typeof import('ant-design-vue/es')['Input']
   }
 }
