@@ -2,21 +2,20 @@
 import { ref, watch } from 'vue'
 import { Dayjs } from 'dayjs'
 
-const timeRange = ref<Dayjs>()
-const timeRangeFmt = ref<string[]>()
+const timeRange = ref(['02:02', '08:06'])
 
-watch(timeRange, (value) => {
-  if (value && value.length === 2) {
-    timeRangeFmt.value = value.map(t => t.format('HH:mm'))
-  } else {
-    timeRangeFmt.value = []
-  }
-})
+const handleChange = (value) => {
+  debugger
+}
+const handleBlur = () => {
+  debugger
+}
 </script>
 
 <template>
-  <a-time-range-picker v-model:value="timeRange" format="hh:mm" />
-  <div>{{ timeRangeFmt }}</div>
+  <a-time-range-picker @change="handleChange" @blur="handleBlur" v-model:value="timeRange" format="hh:mm"
+                       valueFormat="hh:mm" mode="combobox"/>
+  <div>{{ timeRange }}</div>
 </template>
 
 <style scoped lang="sass">

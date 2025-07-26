@@ -45,12 +45,14 @@ const getMonthData = (value: Dayjs) => {
 <template>
   <a-calendar v-model:value="value">
     <template #dateCellRender="{ current }">
-      <ul class="events">
-        <li v-for="item in getListData(current)" :key="item.content">
-<!--          <a-badge :status="item.type" :text="item.content" />-->
-          <a-input v-model:value="item.content" placeholder="Basic usage" />
-        </li>
-      </ul>
+      <div class="container">
+        <div class="item"><span class="circle one"></span>一值</div>
+        <div class="item"><span class="circle four"></span>四值</div>
+        <div class="item"><span class="circle two"></span>二值</div>
+        <div class="item"><span class="circle five"></span>五值</div>
+        <div class="item"><span class="circle three"></span>三值</div>
+        <div class="item"><span class="circle six"></span>六值</div>
+      </div>
     </template>
     <template #monthCellRender="{ current }">
       <div v-if="getMonthData(current)" class="notes-month">
@@ -83,5 +85,50 @@ const getMonthData = (value: Dayjs) => {
 
 .notes-month section {
   font-size: 28px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* 两列 */
+  gap: 8px 40px; /* 行间距, 列间距 */
+  font-size: 16px;
+  width: max-content;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  margin: 4px 0;
+}
+
+.circle {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.one {
+  background: #3fa7f5;
+}
+
+.two {
+  background: #7aaef0;
+}
+
+.three {
+  background: #7c00ff;
+}
+
+.four {
+  background: #9fffff;
+}
+
+.five {
+  background: #7bb031;
+}
+
+.six {
+  background: #d6d6d6;
 }
 </style>

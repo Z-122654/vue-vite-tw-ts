@@ -53,8 +53,13 @@ const router = createRouter({
     },
     {
       path: '/ant/calendar',
-      name: 'dropUploadFile',
+      name: 'calendar',
       component: () => import('@/views/ant/Calendar.vue')
+    },
+    {
+      path: '/ant/customCalendar',
+      name: 'customCalendar',
+      component: () => import('@/views/ant/CustomHeaderCalendar.vue')
     },
     {
       path: '/ant/timeRangePicker',
