@@ -72,6 +72,11 @@ const router = createRouter({
       component: () => import('@/views/ant/MergeTable.vue')
     },
     {
+      path: '/ant/steps',
+      name: 'timeRangePicker',
+      component: () => import('@/views/ant/Steps.vue')
+    },
+    {
       path: '/base/tanshuti',
       name: 'tanshuti',
       component: () => import('@/views/base/TanShuTi.vue')
