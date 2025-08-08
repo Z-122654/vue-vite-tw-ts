@@ -1,6 +1,7 @@
 import { createApp } from 'vue'
 import App from '@/App.vue'
 import '@/styles/index.sass'
+import '@/assets/index.css'
 import router from '@/router'
 import { createPinia } from 'pinia'
 import vant from 'vant'
@@ -11,6 +12,7 @@ import 'ant-design-vue/dist/reset.css'
 import ElementPlus from 'element-plus'
 import 'element-plus/dist/index.css'
 import VueMarkdown from 'vue-markdown'
+
 
 const app = createApp(App)
 app.use(router)

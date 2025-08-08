@@ -12,74 +12,121 @@ const router = createRouter({
       }
     },
     {
-      path: '/vant/list',
-      name: 'vantList',
-      component: () => import('@/views/vant/List.vue')
+      path: '/vant',
+      name: 'vant',
+      children: [
+        {
+          path: 'list',
+          name: 'vantList',
+          component: () => import('@/views/vant/List.vue')
+        },
+        {
+          path: 'form',
+          name: 'vantForm',
+          component: () => import('@/views/vant/Form.vue')
+        }
+      ]
     },
     {
-      path: '/vant/form',
-      name: 'vantForm',
-      component: () => import('@/views/vant/Form.vue')
+      path: '/ant',
+      name: 'ant',
+      children: [
+        {
+          path: 'button',
+          name: 'antButton',
+          component: () => import('@/views/ant/Button.vue')
+        },
+        {
+          path: 'calendar',
+          name: 'antCalendar',
+          component: () => import('@/views/ant/Calendar.vue')
+        },
+        {
+          path: 'customCalendar',
+          name: 'antCustomCalendar',
+          component: () => import('@/views/ant/CustomHeaderCalendar.vue')
+        },
+        {
+          path: 'timeRangePicker',
+          name: 'antTimeRangePicker',
+          component: () => import('@/views/ant/TimeRangePicker.vue')
+        },
+        {
+          path: 'mergeTable',
+          name: 'antTimeRangePicker',
+          component: () => import('@/views/ant/MergeTable.vue')
+        },
+        {
+          path: 'steps',
+          name: 'antTimeRangePicker',
+          component: () => import('@/views/ant/Steps.vue')
+        }
+      ]
     },
     {
-      path: '/ant/button',
-      name: 'antButton',
-      component: () => import('@/views/ant/Button.vue')
+      path: '/pinia',
+      name: 'pinia',
+      children: [
+        {
+          path: 'rectangle',
+          name: 'piniaRectangle',
+          component: () => import('@/views/pinia/Rectangle.vue')
+        },
+        {
+          path: 'user',
+          name: 'piniaUser',
+          component: () => import('@/views/pinia/user/UserList.vue')
+        }
+      ]
     },
     {
-      path: '/pinia/rectangle',
-      name: 'piniaRectangle',
-      component: () => import('@/views/pinia/Rectangle.vue')
+      path: '/echarts',
+      name: 'echarts',
+      children: [
+        {
+          path: 'devicePoint',
+          name: 'echartsDevicePoint',
+          component: () => import('@/views/echarts/DevicePoint.vue')
+        }
+      ]
     },
     {
-      path: '/pinia/user',
-      name: 'piniaTable',
-      component: () => import('@/views/pinia/user/UserList.vue')
+      path: '/element',
+      name: 'element',
+      children: [
+        {
+          path: 'dialog/deepseekTestDialog',
+          name: 'deepseekTestDialog',
+          component: () => import('@/views/element/base/DeepseekTestDialog.vue')
+        }
+      ]
     },
     {
-      path: '/echart/devicePoint',
-      name: 'echartDevicePoint',
-      component: () => import('@/views/echarts/DevicePoint.vue')
+      path: '/base',
+      name: 'base',
+      children: [
+        {
+          path: 'dropUploadFile',
+          name: 'baseDropUploadFile',
+          component: () => import('@/views/base/DropUploadFile.vue')
+        },
+        {
+          path: 'tanshuti',
+          name: 'baseTanshuti',
+          component: () => import('@/views/base/TanShuTi.vue')
+        }
+      ]
     },
     {
-      path: '/element/dialog/deepseekTestDialog',
-      name: 'deepseekTestDialog',
-      component: () => import('@/views/element/base/DeepseekTestDialog.vue')
-    },
-    {
-      path: '/base/dropUploadFile',
-      name: 'dropUploadFile',
-      component: () => import('@/views/base/DropUploadFile.vue')
-    },
-    {
-      path: '/ant/calendar',
-      name: 'calendar',
-      component: () => import('@/views/ant/Calendar.vue')
-    },
-    {
-      path: '/ant/customCalendar',
-      name: 'customCalendar',
-      component: () => import('@/views/ant/CustomHeaderCalendar.vue')
-    },
-    {
-      path: '/ant/timeRangePicker',
-      name: 'timeRangePicker',
-      component: () => import('@/views/ant/TimeRangePicker.vue')
-    },
-    {
-      path: '/ant/mergeTable',
-      name: 'timeRangePicker',
-      component: () => import('@/views/ant/MergeTable.vue')
-    },
-    {
-      path: '/ant/steps',
-      name: 'timeRangePicker',
-      component: () => import('@/views/ant/Steps.vue')
-    },
-    {
-      path: '/base/tanshuti',
-      name: 'tanshuti',
-      component: () => import('@/views/base/TanShuTi.vue')
+      path: '/vueFlow',
+      name: 'vueFlow',
+      children: [
+        {
+          path: 'baseDemo',
+          name: 'vueFlowBaseDemo',
+          component: () => import('@/views/vue-flow/BaseDemo.vue')
+        }
+      ]
     }
   ]
 })
