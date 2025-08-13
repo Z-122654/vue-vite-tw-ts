@@ -48,7 +48,7 @@ const nodes = ref<Node[]>([
       width: '200px',
       height: '100px',
       textAlign: 'center',
-      lineHeight: '100px',
+      lineHeight: '85px',
       clipPath: 'polygon(50% 0, 100% 50%, 50% 100%, 0 50%)',
       background: '#fff',
       border: '1px solid #000'
