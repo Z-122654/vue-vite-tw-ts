@@ -122,10 +122,15 @@ const router = createRouter({
       name: 'vueFlow',
       children: [
         {
-          path: 'baseDemo',
-          name: 'vueFlowBaseDemo',
-          component: () => import('@/views/vue-flow/BaseDemo.vue')
-        }
+          path: 'baseDemo1',
+          name: 'vueFlowBaseDemo1',
+          component: () => import('@/views/vue-flow/test1/BaseDemo.vue')
+        },
+        {
+          path: 'baseDemo2',
+          name: 'vueFlowBaseDemo2',
+          component: () => import('@/views/vue-flow/test2/BaseDemo.vue')
+        },
       ]
     }
   ]
