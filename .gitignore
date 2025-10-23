@@ -11,3 +11,5 @@ reports
 cucumber-messages.ndjson
 .idea
 .gitignore
+
+GEMINI.md

@@ -28,7 +28,7 @@ const nodeIsApproving = computed(() => props.data.some(item => item.isCompleted 
 <style>
 .list-node {
   padding: 10px;
-  background: #f7f7f7;
+  background: #ffffff;
   border-radius: 5px;
   max-width: 500px;
 }

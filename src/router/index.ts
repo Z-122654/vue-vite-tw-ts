@@ -60,6 +60,22 @@ const router = createRouter({
           path: 'steps',
           name: 'antTimeRangePicker',
           component: () => import('@/views/ant/Steps.vue')
+        },
+        {
+          path: 'datePickerTest',
+          name: 'antDatePickerTest',
+          component: () => import('@/views/ant/DatePickerTest.vue')
+        },
+        {
+          path: 'table',
+          name: 'table',
+          children: [
+            {
+              path: 'table1',
+              name: 'table1',
+              component: () => import('@/views/ant/table/table1.vue')
+            }
+          ]
         }
       ]
     },
@@ -130,7 +146,7 @@ const router = createRouter({
           path: 'baseDemo2',
           name: 'vueFlowBaseDemo2',
           component: () => import('@/views/vue-flow/test2/BaseDemo.vue')
-        },
+        }
       ]
     }
   ]

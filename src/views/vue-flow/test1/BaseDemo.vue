@@ -41,9 +41,9 @@ const nodes = ref<Node[]>([
   },
   {
     id: '3',
-    type: 'default', // Using default for the diamond shape, will style it later
+    type: 'list', // Using default for the diamond shape, will style it later
     position: { x: 800, y: 450 },
-    data: { label: '3 是否满足交接班条件' },
+    data: [{ isCompleted: '0', content: '3 是否满足交接班条件' }],
      style: {
       width: '200px',
       height: '100px',
