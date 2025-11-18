@@ -13,3 +13,6 @@ cucumber-messages.ndjson
 .gitignore
 
 GEMINI.md
+.claude
+.vscode
+.github

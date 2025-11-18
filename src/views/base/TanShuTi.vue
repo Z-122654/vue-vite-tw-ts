@@ -239,7 +239,11 @@
 <style scoped lang="sass">
 @font-face
   font-family: 'tanshuti'
-  src: url("@/assets/font/Aa叹书体(非商业使用).ttf") format('truetype')
+  src: url("@/assets/font/tanshuti.ttf") format('truetype')
+
+@font-face
+  font-family: 'ZiTiChuanQiTeZhanTi'
+  src: url("@/assets/font/ZiTiChuanQiTeZhanTi-MianFeiShangYong-2.ttf") format('truetype')
 
 .w-title-25
   font-size: 25px
@@ -254,6 +258,7 @@
   font-size: 20px
   line-height: 35px
   font-weight: bolder
+  font-family: 'ZiTiChuanQiTeZhanTi', serif
 
 .w-content
   font-size: 20px
