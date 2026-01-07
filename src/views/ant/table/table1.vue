@@ -1,5 +1,5 @@
 <template>
-  <a-table :columns="columns" :data-source="data" style="height: 800px;">
+  <a-table :columns="columns" :data-source="data" style="height: 320px;">
     <template #headerCell="{ column }">
       <template v-if="column.key === 'name'">
         <span>

@@ -76,6 +76,17 @@ const router = createRouter({
               component: () => import('@/views/ant/table/table1.vue')
             }
           ]
+        },
+        {
+          path: 'carousel',
+          name: 'carousel',
+          children: [
+            {
+              path: 'carousel01',
+              name: 'carousel01',
+              component: () => import('@/views/ant/carousel/carousel01.vue')
+            }
+          ]
         }
       ]
     },
@@ -103,6 +114,11 @@ const router = createRouter({
           path: 'devicePoint',
           name: 'echartsDevicePoint',
           component: () => import('@/views/echarts/DevicePoint.vue')
+        },
+        {
+          path: 'secondPhaseCoalConsumption',
+          name: 'echartsSecondPhaseCoalConsumption',
+          component: () => import('@/views/echarts/secondPhaseCoalConsumption.vue')
         }
       ]
     },
@@ -130,6 +146,11 @@ const router = createRouter({
           path: 'tanshuti',
           name: 'baseTanshuti',
           component: () => import('@/views/base/TanShuTi.vue')
+        },
+        {
+          path: 'vueRender',
+          name: 'vueRender',
+          component: () => import('@/views/base/VueRender.vue')
         }
       ]
     },
