@@ -12,7 +12,6 @@ cucumber-messages.ndjson
 .idea
 .gitignore
 
-GEMINI.md
-.claude
 .vscode
 .github
+stats.html

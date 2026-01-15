@@ -74,7 +74,12 @@ const router = createRouter({
               path: 'table1',
               name: 'table1',
               component: () => import('@/views/ant/table/table1.vue')
-            }
+            },
+            {
+              path: 'table2',
+              name: 'table2',
+              component: () => import('@/views/ant/table/table2.vue')
+            },
           ]
         },
         {
