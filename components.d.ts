@@ -27,6 +27,7 @@ declare module 'vue' {
     ATimeline: typeof import('ant-design-vue/es')['Timeline']
     ATimelineItem: typeof import('ant-design-vue/es')['TimelineItem']
     ATimeRangePicker: typeof import('ant-design-vue/es')['TimeRangePicker']
+    ATree: typeof import('ant-design-vue/es')['Tree']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SpecialEdge: typeof import('./src/components/SpecialEdge.vue')['default']

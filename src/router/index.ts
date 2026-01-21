@@ -92,6 +92,17 @@ const router = createRouter({
               component: () => import('@/views/ant/carousel/carousel01.vue')
             }
           ]
+        },
+        {
+          path: 'tree',
+          name: 'tree',
+          children: [
+            {
+              path: 'tree01',
+              name: 'tree01',
+              component: () => import('@/views/ant/tree/tree01.vue')
+            }
+          ]
         }
       ]
     },
