@@ -135,6 +135,36 @@ const router = createRouter({
           path: 'secondPhaseCoalConsumption',
           name: 'echartsSecondPhaseCoalConsumption',
           component: () => import('@/views/echarts/secondPhaseCoalConsumption.vue')
+        },
+        {
+          path: 'cylinderTest',
+          name: 'echartsCylinderTest',
+          component: () => import('@/views/echarts/CylinderTest.vue')
+        },
+        {
+          path: 'cubeTest',
+          name: 'echartsCubeTest',
+          component: () => import('@/views/echarts/CubeTest.vue')
+        },
+        {
+          path: 'lollipopTest',
+          name: 'echartsLollipopTest',
+          component: () => import('@/views/echarts/LollipopTest.vue')
+        },
+        {
+          path: 'progressBarTest',
+          name: 'echartsProgressBarTest',
+          component: () => import('@/views/echarts/ProgressBarTest.vue')
+        },
+        {
+          path: 'square3dBarTest',
+          name: 'echartsSquare3dBarTest',
+          component: () => import('@/views/echarts/Square3DBarTest.vue')
+        },
+        {
+          path: 'diamondEchart',
+          name: 'echartsDiamondEchart',
+          component: () => import('@/views/echarts/DiamondEchart.vue')
         }
       ]
     },
@@ -183,6 +213,17 @@ const router = createRouter({
           path: 'baseDemo2',
           name: 'vueFlowBaseDemo2',
           component: () => import('@/views/vue-flow/test2/BaseDemo.vue')
+        }
+      ]
+    },
+    {
+      path: '/ims',
+      name: 'ims',
+      children: [
+        {
+          path: 'toggle',
+          name: 'imsToggle',
+          component: () => import('@/views/ims/ImsToggleTest.vue')
         }
       ]
     }

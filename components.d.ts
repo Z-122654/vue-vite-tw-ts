@@ -32,5 +32,7 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     SpecialEdge: typeof import('./src/components/SpecialEdge.vue')['default']
     SpecialNode: typeof import('./src/components/SpecialNode.vue')['default']
+    TechProgressBar: typeof import('./src/components/TechProgressBar.vue')['default']
+    TechSquareBarChart: typeof import('./src/components/TechSquareBarChart.vue')['default']
   }
 }
