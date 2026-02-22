@@ -226,6 +226,27 @@ const router = createRouter({
           component: () => import('@/views/ims/ImsToggleTest.vue')
         }
       ]
+    },
+    {
+      path: '/alarm',
+      name: 'alarm',
+      children: [
+        {
+          path: '',
+          name: 'alarmHome',
+          component: () => import('@/views/alarm/AlarmHomeView.vue')
+        },
+        {
+          path: 'config',
+          name: 'alarmConfigCreate',
+          component: () => import('@/views/alarm/AlarmConfigView.vue')
+        },
+        {
+          path: 'config/:id',
+          name: 'alarmConfigEdit',
+          component: () => import('@/views/alarm/AlarmConfigView.vue')
+        }
+      ]
     }
   ]
 })
