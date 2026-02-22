@@ -1,253 +1,30 @@
 import { createRouter, createWebHistory } from 'vue-router'
+import { homeRoutes } from '@/router/modules/home'
+import { vantRoutes } from '@/router/modules/vant'
+import { antRoutes } from '@/router/modules/ant'
+import { piniaRoutes } from '@/router/modules/pinia'
+import { echartsRoutes } from '@/router/modules/echarts'
+import { elementRoutes } from '@/router/modules/element'
+import { baseRoutes } from '@/router/modules/base'
+import { vueFlowRoutes } from '@/router/modules/vue-flow'
+import { imsRoutes } from '@/router/modules/ims'
+import { alarmRoutes } from '@/router/modules/alarm'
+import { systemRoutes } from '@/router/modules/system'
 
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    {
-      path: '/',
-      name: 'home',
-      component: () => import('@/views/HelloWorld.vue'),
-      props: {
-        msg: 'Hello Vue 3 + TypeScript + Vite + Tailwind CSS/UI + Pinia + Vue Router'
-      }
-    },
-    {
-      path: '/vant',
-      name: 'vant',
-      children: [
-        {
-          path: 'list',
-          name: 'vantList',
-          component: () => import('@/views/vant/List.vue')
-        },
-        {
-          path: 'form',
-          name: 'vantForm',
-          component: () => import('@/views/vant/Form.vue')
-        }
-      ]
-    },
-    {
-      path: '/ant',
-      name: 'ant',
-      children: [
-        {
-          path: 'button',
-          name: 'antButton',
-          component: () => import('@/views/ant/Button.vue')
-        },
-        {
-          path: 'calendar',
-          name: 'antCalendar',
-          component: () => import('@/views/ant/Calendar.vue')
-        },
-        {
-          path: 'customCalendar',
-          name: 'antCustomCalendar',
-          component: () => import('@/views/ant/CustomHeaderCalendar.vue')
-        },
-        {
-          path: 'timeRangePicker',
-          name: 'antTimeRangePicker',
-          component: () => import('@/views/ant/TimeRangePicker.vue')
-        },
-        {
-          path: 'mergeTable',
-          name: 'antTimeRangePicker',
-          component: () => import('@/views/ant/MergeTable.vue')
-        },
-        {
-          path: 'steps',
-          name: 'antTimeRangePicker',
-          component: () => import('@/views/ant/Steps.vue')
-        },
-        {
-          path: 'datePickerTest',
-          name: 'antDatePickerTest',
-          component: () => import('@/views/ant/DatePickerTest.vue')
-        },
-        {
-          path: 'table',
-          name: 'table',
-          children: [
-            {
-              path: 'table1',
-              name: 'table1',
-              component: () => import('@/views/ant/table/table1.vue')
-            },
-            {
-              path: 'table2',
-              name: 'table2',
-              component: () => import('@/views/ant/table/table2.vue')
-            },
-          ]
-        },
-        {
-          path: 'carousel',
-          name: 'carousel',
-          children: [
-            {
-              path: 'carousel01',
-              name: 'carousel01',
-              component: () => import('@/views/ant/carousel/carousel01.vue')
-            }
-          ]
-        },
-        {
-          path: 'tree',
-          name: 'tree',
-          children: [
-            {
-              path: 'tree01',
-              name: 'tree01',
-              component: () => import('@/views/ant/tree/tree01.vue')
-            }
-          ]
-        }
-      ]
-    },
-    {
-      path: '/pinia',
-      name: 'pinia',
-      children: [
-        {
-          path: 'rectangle',
-          name: 'piniaRectangle',
-          component: () => import('@/views/pinia/Rectangle.vue')
-        },
-        {
-          path: 'user',
-          name: 'piniaUser',
-          component: () => import('@/views/pinia/user/UserList.vue')
-        }
-      ]
-    },
-    {
-      path: '/echarts',
-      name: 'echarts',
-      children: [
-        {
-          path: 'devicePoint',
-          name: 'echartsDevicePoint',
-          component: () => import('@/views/echarts/DevicePoint.vue')
-        },
-        {
-          path: 'secondPhaseCoalConsumption',
-          name: 'echartsSecondPhaseCoalConsumption',
-          component: () => import('@/views/echarts/secondPhaseCoalConsumption.vue')
-        },
-        {
-          path: 'cylinderTest',
-          name: 'echartsCylinderTest',
-          component: () => import('@/views/echarts/CylinderTest.vue')
-        },
-        {
-          path: 'cubeTest',
-          name: 'echartsCubeTest',
-          component: () => import('@/views/echarts/CubeTest.vue')
-        },
-        {
-          path: 'lollipopTest',
-          name: 'echartsLollipopTest',
-          component: () => import('@/views/echarts/LollipopTest.vue')
-        },
-        {
-          path: 'progressBarTest',
-          name: 'echartsProgressBarTest',
-          component: () => import('@/views/echarts/ProgressBarTest.vue')
-        },
-        {
-          path: 'square3dBarTest',
-          name: 'echartsSquare3dBarTest',
-          component: () => import('@/views/echarts/Square3DBarTest.vue')
-        },
-        {
-          path: 'diamondEchart',
-          name: 'echartsDiamondEchart',
-          component: () => import('@/views/echarts/DiamondEchart.vue')
-        }
-      ]
-    },
-    {
-      path: '/element',
-      name: 'element',
-      children: [
-        {
-          path: 'dialog/deepseekTestDialog',
-          name: 'deepseekTestDialog',
-          component: () => import('@/views/element/base/DeepseekTestDialog.vue')
-        }
-      ]
-    },
-    {
-      path: '/base',
-      name: 'base',
-      children: [
-        {
-          path: 'dropUploadFile',
-          name: 'baseDropUploadFile',
-          component: () => import('@/views/base/DropUploadFile.vue')
-        },
-        {
-          path: 'tanshuti',
-          name: 'baseTanshuti',
-          component: () => import('@/views/base/TanShuTi.vue')
-        },
-        {
-          path: 'vueRender',
-          name: 'vueRender',
-          component: () => import('@/views/base/VueRender.vue')
-        }
-      ]
-    },
-    {
-      path: '/vueFlow',
-      name: 'vueFlow',
-      children: [
-        {
-          path: 'baseDemo1',
-          name: 'vueFlowBaseDemo1',
-          component: () => import('@/views/vue-flow/test1/BaseDemo.vue')
-        },
-        {
-          path: 'baseDemo2',
-          name: 'vueFlowBaseDemo2',
-          component: () => import('@/views/vue-flow/test2/BaseDemo.vue')
-        }
-      ]
-    },
-    {
-      path: '/ims',
-      name: 'ims',
-      children: [
-        {
-          path: 'toggle',
-          name: 'imsToggle',
-          component: () => import('@/views/ims/ImsToggleTest.vue')
-        }
-      ]
-    },
-    {
-      path: '/alarm',
-      name: 'alarm',
-      children: [
-        {
-          path: '',
-          name: 'alarmHome',
-          component: () => import('@/views/alarm/AlarmHomeView.vue')
-        },
-        {
-          path: 'config',
-          name: 'alarmConfigCreate',
-          component: () => import('@/views/alarm/AlarmConfigView.vue')
-        },
-        {
-          path: 'config/:id',
-          name: 'alarmConfigEdit',
-          component: () => import('@/views/alarm/AlarmConfigView.vue')
-        }
-      ]
-    }
+    ...homeRoutes,
+    ...vantRoutes,
+    ...antRoutes,
+    ...piniaRoutes,
+    ...echartsRoutes,
+    ...elementRoutes,
+    ...baseRoutes,
+    ...vueFlowRoutes,
+    ...imsRoutes,
+    ...alarmRoutes,
+    ...systemRoutes
   ]
 })
 
